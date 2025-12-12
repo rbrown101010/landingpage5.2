@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0b0f" />
+
+    <title>vibecode.dev — Build native apps from a prompt</title>
+    <meta
+      name="description"
+      content="Vibecode turns your idea into a real native app you can run on your phone—fast. Prompt → React Native/Expo code → test instantly → share → export."
+    />
+
+    <meta property="og:title" content="vibecode.dev — Build native apps from a prompt" />
+    <meta
+      property="og:description"
+      content="Prompt → native app. Vibecode builds React Native/Expo apps you can test on-device, share via App Clips, and export to Cursor."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vibecode.dev/" />
+    <meta property="og:image" content="https://vibecode.dev/og.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="canonical" href="https://vibecode.dev/" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar" data-topbar>
+      <div class="container topbar__inner">
+        <a class="brand" href="#top" aria-label="vibecode.dev home">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" role="img" aria-hidden="true">
+              <path d="M10 44L28 14L40 34L54 12" stroke="currentColor" stroke-width="6" stroke-linecap="square" />
+              <path d="M10 52H54" stroke="currentColor" stroke-width="6" stroke-linecap="square" />
+            </svg>
+          </span>
+          <span class="brand__text">vibecode<span class="brand__dot">.dev</span></span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="navLinks">
+            <span class="sr-only">Toggle navigation</span>
+            <span aria-hidden="true">Menu</span>
+          </button>
+          <div class="nav__links" id="navLinks" data-nav-links>
+            <a href="#features">Features</a>
+            <a href="#how">How it works</a>
+            <a href="#proof">Proof</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+            <a class="btn btn--small btn--ink" href="#get-started">Get started</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <div class="badge">
+              <span class="badge__dot" aria-hidden="true"></span>
+              <span>Prompt → native app (React Native + Expo)</span>
+            </div>
+
+            <h1 class="display">
+              Build a real app from a prompt.
+              <span class="display__accent">On your phone.</span>
+            </h1>
+            <p class="lede">
+              Vibecode turns your idea into a working native app you can run, tap, and share—fast.
+              Generate React Native/Expo code, test instantly on-device, then export to Cursor when you’re ready to go
+              deeper.
+            </p>
+
+            <div class="cta-row" id="get-started">
+              <a class="btn btn--prime" href="#signup" data-scroll>Join the early list</a>
+              <a class="btn btn--ghost" href="#demo" data-scroll>See the flow</a>
+            </div>
+
+            <div class="micro">
+              <div class="micro__item">
+                <strong>Fast builds</strong>
+                <span>Minutes, not months</span>
+              </div>
+              <div class="micro__item">
+                <strong>On-device</strong>
+                <span>Instant testing</span>
+              </div>
+              <div class="micro__item">
+                <strong>Exportable</strong>
+                <span>Own your code</span>
+              </div>
+            </div>
+
+            <div class="trustline" aria-label="Compatibility">
+              <span class="pill">iOS</span>
+              <span class="pill">React Native</span>
+              <span class="pill">Expo</span>
+              <span class="pill">Cursor-ready</span>
+            </div>
+          </div>
+
+          <div class="hero__mock" aria-label="Product preview">
+            <div class="card card--stack">
+              <div class="card__top">
+                <span class="chip">Vibecode</span>
+                <span class="chip chip--lime">Live preview</span>
+              </div>
+              <div class="mock">
+                <div class="mock__header">
+                  <div class="dots" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div class="mock__title">Build a habit tracker</div>
+                </div>
+                <div class="mock__body">
+                  <div class="mock__bubble">
+                    “Make a clean habit tracker with streaks, reminders, and a calendar view.”
+                  </div>
+                  <div class="mock__bubble mock__bubble--ai">
+                    Done. I built the screens, navigation, storage, and haptics. Want a dark theme or widgets?
+                  </div>
+                  <div class="mock__grid">
+                    <div class="mock__tile">
+                      <strong>Calendar</strong>
+                      <span>Tap to log</span>
+                    </div>
+                    <div class="mock__tile">
+                      <strong>Streaks</strong>
+                      <span>Momentum</span>
+                    </div>
+                    <div class="mock__tile">
+                      <strong>Reminders</strong>
+                      <span>Haptics</span>
+                    </div>
+                    <div class="mock__tile">
+                      <strong>Share</strong>
+                      <span>App Clip</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mock__footer">
+                  <button class="btn btn--small btn--ink" type="button" data-toast="Exported to Cursor (SSH)">
+                    Export to Cursor
+                  </button>
+                  <button class="btn btn--small btn--ghost" type="button" data-toast="Shared via App Clip">
+                    Share
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card--note" id="demo" aria-label="What you can build">
+              <p>
+                <strong>Prototypes that feel real</strong>:
+                productivity tools, AI companions, internal dashboards, MVPs, and polished App Store-ready apps.
+              </p>
+              <div class="note-row">
+                <span class="stamp">Prompt</span>
+                <span class="arrow" aria-hidden="true">→</span>
+                <span class="stamp stamp--pink">App</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container marquee" aria-label="Highlights">
+          <div class="marquee__track">
+            <span>Prompt to React Native</span>
+            <span>•</span>
+            <span>Instant on-device testing</span>
+            <span>•</span>
+            <span>Pinch-to-build customization</span>
+            <span>•</span>
+            <span>App Clips sharing</span>
+            <span>•</span>
+            <span>Export your source code</span>
+            <span>•</span>
+            <span>Cursor + SSH workflow</span>
+            <span>•</span>
+          </div>
+          <div class="marquee__track" aria-hidden="true">
+            <span>Prompt to React Native</span>
+            <span>•</span>
+            <span>Instant on-device testing</span>
+            <span>•</span>
+            <span>Pinch-to-build customization</span>
+            <span>•</span>
+            <span>App Clips sharing</span>
+            <span>•</span>
+            <span>Export your source code</span>
+            <span>•</span>
+            <span>Cursor + SSH workflow</span>
+            <span>•</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="h2">Everything you need to go from vibe to shipped.</h2>
+            <p class="sub">
+              The goal isn’t “a demo.” It’s a real app architecture you can iterate on—without losing the thread.
+            </p>
+          </div>
+
+          <div class="grid grid--3">
+            <article class="feature">
+              <div class="feature__icon" aria-hidden="true">✦</div>
+              <h3>Prompt-first building</h3>
+              <p>Describe the app. Vibecode generates screens, navigation, data storage, and UI components that compile.</p>
+              <ul class="checks">
+                <li>React Native + Expo foundations</li>
+                <li>Iterate with follow-up prompts</li>
+                <li>Clean structure, not spaghetti</li>
+              </ul>
+            </article>
+
+            <article class="feature">
+              <div class="feature__icon" aria-hidden="true">⚡</div>
+              <h3>Instant on-device testing</h3>
+              <p>Feel the UX immediately. Tap, scroll, haptics—no “it works on my laptop” energy.</p>
+              <ul class="checks">
+                <li>Fast preview loop</li>
+                <li>Design tweaks in seconds</li>
+                <li>Less context switching</li>
+              </ul>
+            </article>
+
+            <article class="feature">
+              <div class="feature__icon" aria-hidden="true">⬚</div>
+              <h3>Pinch-to-build customization</h3>
+              <p>Adjust colors, spacing, components, and polish through an intuitive UI—then prompt for advanced logic.</p>
+              <ul class="checks">
+                <li>Theme + layout controls</li>
+                <li>Haptics & interactions</li>
+                <li>Ship-ready fit & finish</li>
+              </ul>
+            </article>
+
+            <article class="feature">
+              <div class="feature__icon" aria-hidden="true">⤴</div>
+              <h3>Share instantly</h3>
+              <p>Show a working build fast—without asking people to install a whole thing.</p>
+              <ul class="checks">
+                <li>App Clips-style sharing</li>
+                <li>Perfect for quick feedback</li>
+                <li>Demo like a pro</li>
+              </ul>
+            </article>
+
+            <article class="feature">
+              <div class="feature__icon" aria-hidden="true">⛓</div>
+              <h3>Export & own your code</h3>
+              <p>No black box. Download the source or connect your editor workflow and keep building.</p>
+              <ul class="checks">
+                <li>Source export</li>
+                <li>Cursor-friendly</li>
+                <li>SSH dev flow</li>
+              </ul>
+            </article>
+
+            <article class="feature">
+              <div class="feature__icon" aria-hidden="true">◎</div>
+              <h3>Transparent usage pricing</h3>
+              <p>Pay for what you use—great for spikes, weekends, and rapid experiments.</p>
+              <ul class="checks">
+                <li>Credit-based usage</li>
+                <li>Predictable spend</li>
+                <li>Scale when it’s worth it</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="how">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="h2">A tight loop that keeps you in flow.</h2>
+            <p class="sub">Four steps. No drama. You ship faster because your feedback loop is brutally short.</p>
+          </div>
+
+          <ol class="steps">
+            <li class="step">
+              <div class="step__num">1</div>
+              <div class="step__body">
+                <h3>Describe the app</h3>
+                <p>Start with one prompt. Add constraints like “offline-first,” “haptics,” or “simple onboarding.”</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step__num">2</div>
+              <div class="step__body">
+                <h3>Run it on your phone</h3>
+                <p>Preview immediately. If it feels wrong, fix it where you feel it—on the device.</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step__num">3</div>
+              <div class="step__body">
+                <h3>Polish fast</h3>
+                <p>Use pinch-to-build for design; use prompts for logic. Iterate until it’s actually good.</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step__num">4</div>
+              <div class="step__body">
+                <h3>Export + ship</h3>
+                <p>Take the code to Cursor, add integrations, and push it the last mile (or the last 10%).</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="proof">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="h2">Designed for builders who move.</h2>
+            <p class="sub">Not everyone wants a “no-code toy.” Vibecode is for shipping with taste.</p>
+          </div>
+
+          <div class="grid grid--2">
+            <div class="card card--big">
+              <h3>Use it for:</h3>
+              <div class="tags">
+                <span class="tag">MVPs</span>
+                <span class="tag">Weekend prototypes</span>
+                <span class="tag">Internal tools</span>
+                <span class="tag">AI features</span>
+                <span class="tag">Founder demos</span>
+                <span class="tag">App Store builds</span>
+              </div>
+              <p class="muted">
+                Your idea stays crisp because the loop is immediate—and the output stays useful because you can export
+                the code.
+              </p>
+            </div>
+
+            <div class="card card--big card--quote">
+              <p class="quote">
+                “The killer feature is momentum. You don’t argue with Figma. You just run the thing, tweak it, and keep
+                going.”
+              </p>
+              <p class="quote__byline"><strong>— A builder who hates slow feedback loops</strong></p>
+              <div class="stats">
+                <div class="stat">
+                  <div class="stat__num">≈10×</div>
+                  <div class="stat__label">faster first usable build</div>
+                </div>
+                <div class="stat">
+                  <div class="stat__num">0</div>
+                  <div class="stat__label">tabs open to “figure it out”</div>
+                </div>
+                <div class="stat">
+                  <div class="stat__num">100%</div>
+                  <div class="stat__label">ownable source code</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="logos" aria-label="Social proof">
+            <div class="logos__item">Indie hackers</div>
+            <div class="logos__item">Product teams</div>
+            <div class="logos__item">Agencies</div>
+            <div class="logos__item">Students</div>
+            <div class="logos__item">Developers</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="pricing">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="h2">Pricing that matches how builders work.</h2>
+            <p class="sub">Use credits for bursts. Upgrade when you’re shipping weekly.</p>
+          </div>
+
+          <div class="pricing">
+            <article class="price">
+              <header class="price__head">
+                <h3>Starter</h3>
+                <p class="muted">For trying the loop</p>
+              </header>
+              <div class="price__body">
+                <div class="price__amount">
+                  <span class="price__num">$0</span>
+                  <span class="price__unit">/ to start</span>
+                </div>
+                <ul class="checks">
+                  <li>Prompt builds</li>
+                  <li>On-device preview</li>
+                  <li>Shareable demos</li>
+                </ul>
+              </div>
+              <footer class="price__foot">
+                <a class="btn btn--ghost btn--block" href="#signup" data-scroll>Join the list</a>
+              </footer>
+            </article>
+
+            <article class="price price--featured" aria-label="Most popular plan">
+              <div class="ribbon">Most popular</div>
+              <header class="price__head">
+                <h3>Builder</h3>
+                <p class="muted">For MVPs and shipping</p>
+              </header>
+              <div class="price__body">
+                <div class="price__amount">
+                  <span class="price__num">Credits</span>
+                  <span class="price__unit">pay as you go</span>
+                </div>
+                <ul class="checks">
+                  <li>Faster iterations</li>
+                  <li>Pinch-to-build customization</li>
+                  <li>Export source code</li>
+                </ul>
+              </div>
+              <footer class="price__foot">
+                <a class="btn btn--prime btn--block" href="#signup" data-scroll>Get early access</a>
+              </footer>
+            </article>
+
+            <article class="price">
+              <header class="price__head">
+                <h3>Team</h3>
+                <p class="muted">For product squads</p>
+              </header>
+              <div class="price__body">
+                <div class="price__amount">
+                  <span class="price__num">Talk</span>
+                  <span class="price__unit">/ to us</span>
+                </div>
+                <ul class="checks">
+                  <li>Shared workflows</li>
+                  <li>Export + handoff</li>
+                  <li>Priority support</li>
+                </ul>
+              </div>
+              <footer class="price__foot">
+                <a class="btn btn--ghost btn--block" href="#signup" data-scroll>Contact</a>
+              </footer>
+            </article>
+          </div>
+
+          <p class="fineprint">
+            <strong>Note:</strong> Pricing above is a clean landing placeholder. Hook it to your real plans when ready.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="h2">FAQ</h2>
+            <p class="sub">If you’re wondering it, someone else is too.</p>
+          </div>
+
+          <div class="faq">
+            <details class="qa">
+              <summary>Is this “no-code”?</summary>
+              <div class="qa__a">
+                Vibecode is <strong>prompt-first</strong>, but the output is real <strong>React Native + Expo</strong>
+                code. You can export it and keep building in your editor.
+              </div>
+            </details>
+
+            <details class="qa">
+              <summary>Can I customize the UI?</summary>
+              <div class="qa__a">
+                Yes—use the visual controls to tweak layout, spacing, colors, and polish, then use prompts for deeper
+                logic and behavior changes.
+              </div>
+            </details>
+
+            <details class="qa">
+              <summary>Do I own my code?</summary>
+              <div class="qa__a">
+                That’s the point. Export your source and iterate in tools like Cursor, or connect workflows via SSH.
+              </div>
+            </details>
+
+            <details class="qa">
+              <summary>What can I build?</summary>
+              <div class="qa__a">
+                MVPs, utilities, AI apps, internal tools, and polished consumer apps. If it’s a sane mobile product,
+                Vibecode can get you to a working build fast.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--cta" id="signup" aria-label="Signup">
+        <div class="container cta">
+          <div class="cta__card">
+            <div class="cta__copy">
+              <h2 class="h2">Stop planning. Start tapping.</h2>
+              <p class="sub">
+                Join the early list for vibecode.dev and get first access, drop updates, and launch perks.
+              </p>
+              <ul class="checks">
+                <li>Early access link</li>
+                <li>Build templates + prompt packs</li>
+                <li>Founder updates (low noise)</li>
+              </ul>
+            </div>
+
+            <form class="form" data-signup>
+              <label class="sr-only" for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                inputmode="email"
+                autocomplete="email"
+                placeholder="you@domain.com"
+                required
+              />
+              <button class="btn btn--prime" type="submit">Request access</button>
+              <p class="form__note">
+                Or email us: <button class="linklike" type="button" data-copy="hello@vibecode.dev">hello@vibecode.dev</button>
+              </p>
+              <p class="form__success" data-success hidden>
+                You’re in. Check your inbox soon.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <div class="brand brand--footer">
+            <span class="brand__mark" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" role="img" aria-hidden="true">
+                <path d="M10 44L28 14L40 34L54 12" stroke="currentColor" stroke-width="6" stroke-linecap="square" />
+                <path d="M10 52H54" stroke="currentColor" stroke-width="6" stroke-linecap="square" />
+              </svg>
+            </span>
+            <span class="brand__text">vibecode<span class="brand__dot">.dev</span></span>
+          </div>
+          <p class="muted">
+            Build native apps with taste. Prompt fast, test on-device, export clean.
+          </p>
+        </div>
+
+        <div class="footer__right">
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="#signup">Get access</a>
+        </div>
+      </div>
+      <div class="container footer__bottom">
+        <span class="muted">© <span data-year></span> vibecode.dev</span>
+        <span class="muted">Neobrutalist, but polite.</span>
+      </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite" aria-atomic="true" data-toast hidden></div>
+    <script src="./script.js" defer></script>
+  </body>
+</html>
