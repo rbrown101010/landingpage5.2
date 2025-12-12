@@ -308,6 +308,446 @@ a:hover{ text-decoration: underline; text-decoration-thickness: 3px; text-underl
 }
 .chip--lime{ background: var(--lime); }
 
+/* iPhone Mockup */
+.iphone {
+  position: relative;
+  width: 280px;
+  height: 580px;
+  background: linear-gradient(145deg, #1a1a1f 0%, #0d0d10 100%);
+  border-radius: 52px;
+  padding: 12px;
+  box-shadow: 
+    0 0 0 3px #2a2a30,
+    0 0 0 6px #0a0a0c,
+    0 25px 50px -12px rgba(0,0,0,.6),
+    0 0 80px rgba(124,77,255,.15),
+    inset 0 0 20px rgba(255,255,255,.03);
+  margin: 0 auto;
+}
+
+.iphone__notch {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 28px;
+  background: #0d0d10;
+  border-radius: 0 0 18px 18px;
+  z-index: 10;
+}
+
+.iphone__notch::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #1a1a24 40%, #0a0a0f 60%);
+  border-radius: 50%;
+  box-shadow: -22px 0 0 3px #0a0a0f;
+}
+
+.iphone__screen {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 42px;
+  overflow: hidden;
+  position: relative;
+}
+
+.iphone__bar {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 5px;
+  background: rgba(0,0,0,.2);
+  border-radius: 999px;
+  z-index: 10;
+}
+
+/* App inside iPhone */
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  color: #fff;
+}
+
+.app__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 42px 20px 12px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.app__label {
+  background: linear-gradient(135deg, var(--lime), var(--sky));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.app__time {
+  opacity: 0.7;
+}
+
+.app__content {
+  flex: 1;
+  padding: 8px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.app__greeting {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.app__wave {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 8px;
+  animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(20deg); }
+  75% { transform: rotate(-10deg); }
+}
+
+.app__title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #fff 30%, rgba(255,255,255,.7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.app__subtitle {
+  margin: 6px 0 0;
+  font-size: 14px;
+  opacity: 0.6;
+  font-weight: 500;
+}
+
+.app__card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+}
+
+.app__card--gradient {
+  background: linear-gradient(135deg, rgba(124,77,255,.25) 0%, rgba(255,79,216,.15) 100%);
+  border: 1px solid rgba(255,255,255,.15);
+}
+
+.app__card-icon {
+  font-size: 28px;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,.1);
+  border-radius: 14px;
+}
+
+.app__card-text strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
+.app__card-text span {
+  font-size: 12px;
+  opacity: 0.65;
+}
+
+.app__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.app__stat {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px;
+  padding: 14px;
+  text-align: center;
+}
+
+.app__stat-num {
+  font-size: 26px;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--lime), var(--sky));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.app__stat-label {
+  font-size: 11px;
+  opacity: 0.6;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.app__actions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.app__action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 6px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 14px;
+  font-size: 11px;
+  font-weight: 700;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.app__action span:first-child {
+  font-size: 20px;
+}
+
+.app__action--primary {
+  background: linear-gradient(135deg, rgba(182,255,92,.2), rgba(182,255,92,.08));
+  border-color: rgba(182,255,92,.3);
+  opacity: 1;
+}
+
+.app__nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 14px 10px 28px;
+  background: rgba(0,0,0,.3);
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.app__nav-item {
+  font-size: 22px;
+  opacity: 0.4;
+  transition: opacity 0.2s;
+}
+
+.app__nav-item--active {
+  opacity: 1;
+}
+
+/* Light theme app */
+.app--light {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  color: #1a1a2e;
+}
+
+.app__status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.app__status-icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #1a1a2e;
+}
+
+.app__hero {
+  text-align: center;
+  padding: 20px 20px 16px;
+}
+
+.app__hero-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.app__hero-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: #1a1a2e;
+}
+
+.app__hero-sub {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.app__features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 0 16px;
+}
+
+.app__feature-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 14px 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+}
+
+.app__feature-icon {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.app__feature-card span {
+  font-size: 11px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.app__cta {
+  padding: 16px;
+}
+
+.app__cta-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+}
+
+.app__nav--light {
+  background: #fff;
+  border-top: 1px solid #e2e8f0;
+  padding: 12px 10px 26px;
+}
+
+.app__nav--light .app__nav-item {
+  color: #94a3b8;
+  opacity: 1;
+}
+
+.app__nav--light .app__nav-item--active {
+  color: #6366f1;
+}
+
+.app__nav--light .app__nav-item svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Phone caption */
+.phone-caption {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.phone-caption__arrow {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 4px;
+  opacity: 0.5;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.phone-caption p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+.phone-caption strong {
+  color: var(--lime);
+  opacity: 1;
+}
+
+@media (max-width: 980px) {
+  .iphone {
+    width: 240px;
+    height: 500px;
+    border-radius: 44px;
+    padding: 10px;
+  }
+  .iphone__screen {
+    border-radius: 36px;
+  }
+  .iphone__notch {
+    width: 90px;
+    height: 24px;
+    border-radius: 0 0 14px 14px;
+  }
+  .app__title {
+    font-size: 18px;
+  }
+  .app__wave {
+    font-size: 28px;
+  }
+  .app__card {
+    padding: 12px;
+  }
+  .app__stat {
+    padding: 10px;
+  }
+  .app__stat-num {
+    font-size: 20px;
+  }
+}
+
+/* Legacy mock styles (keeping for other sections) */
 .mock{
   border: 2px solid var(--ink);
   border-radius: 18px;
